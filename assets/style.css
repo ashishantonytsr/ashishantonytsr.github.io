@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Varela+Round&display=swap');
+
+/* *{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: large;
+} */
+
+h2, h3{
+	font-family: 'Varela Round', sans-serif;
+}
 
 .footer{
 	border-radius: 5px;
@@ -5,6 +15,7 @@
 	min-height: 40px;
 	align-items: center;
 	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header{
@@ -20,15 +31,19 @@
 
 .intro-content{
 	/* background-image: linear-gradient(orange, white, green); */
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: 'Josefin Sans', sans-serif;
 	font-size: large;
 }
 
 .intro-title{
 	padding-top: 28px; 
-	font-family: arial; 
+	font-family: 'Varela Round', sans-serif; 
 	font-weight: 800;
 	color: rgba(7, 7, 191, 0.736);
+}
+
+.card-title{
+	font-family: 'Varela Round', sans-serif; 
 }
 
 .frame{
