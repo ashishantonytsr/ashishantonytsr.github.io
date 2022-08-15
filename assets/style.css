@@ -1,0 +1,36 @@
+
+.footer{
+	border-radius: 5px;
+	border: transparent;
+	min-height: 40px;
+	align-items: center;
+	text-align: center;
+}
+
+.header{
+	border-radius: 5px;
+	border: transparent;
+	min-height: 50px;
+}
+
+.content{
+	margin: 50px 0 80px 0;
+	padding: 50px 0 10px 0;
+}
+
+.intro-content{
+	/* background-image: linear-gradient(orange, white, green); */
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: large;
+}
+
+.intro-title{
+	padding-top: 28px; 
+	font-family: arial; 
+	font-weight: 800;
+	color: rgba(7, 7, 191, 0.736);
+}
+
+.frame{
+	padding: 50px 0;
+}
