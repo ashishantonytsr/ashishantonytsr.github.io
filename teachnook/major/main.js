@@ -2,7 +2,7 @@
 
 (fetchData = () => {
   let API_KEY = '4ca72503760e4790a13140644220609';
-  let api = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=new+jersey&days=5&alerts=yes`;
+  let api = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=thrissur&days=5&alerts=yes`;
 
   fetch(api)
     .then((response) => response.json())
