@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			.main-container {
+				border: 1px solid red;
+				border-radius: 20px;
+				margin-top: 3rem;
+			}
+
+			div {
+				padding: 10px;
+			}
+
+			h5 {
+				display: inline;
+			}
+
+			.main-row {
+				margin: 10px;
+				padding: 20px;
+			}
+
+			.list-group-item {
+				text-align: center;
+			}
+		</style>
+
+		<!-- bootstrap cdn -->
+		<link href="./assets/boostrap/css/bootstrap.min.css" rel="stylesheet">
+		<script src="./assets/boostrap/js/bootstrap.bundle.min.js"></script>
+	</head>
+
+	<body>
+
+
+		<div class="container main-container" align="center">
+			<div class="row">
+
+				<div class="col-12">
+					<div class="row">
+						<div class="col-md-2 col-xs-1">
+							<h5>
+								<span id="current-date"></span><br>
+								<span id="current-time"></span>
+							</h5>
+						</div>
+
+						<div class="col-md-8 col-xs-10">
+							<h2>
+								<span id="location-name">Thrissur</span>,
+								<span id="location-region">Kerala</span>
+							</h2>
+							<h2 id="location-country">India</h2>
+						</div>
+
+						<div class="col-md-2 col-xs-1">
+							<h5>Latitude <span id="location-lat"></span> </h5>
+							<h5>Longitude <span id="location-lon"></span> </h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-xs-12 ">
+					<h3>
+						<span id="current-temp">26.8</span>
+						<sup>o</sup>C
+					</h3>
+					<h4>
+						Feels Like
+						<span id="feels-like-temp">26.3</span>
+						<sup>o</sup>C
+					</h4>
+
+					<img id="condition-icon" src="./116.webp" alt=".." width="64px" height="64px">
+					<h5 id="condition-text">Light rain shower</h5>
+				</div>
+
+				<div class="col-md-6 col-xs-12">
+					<div class="card">
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">
+								Wind Speed
+								<span id="current-wind"> 6.1</span>Km/hr
+							</li>
+							<li class="list-group-item">
+								Precipitation
+								<span id="current-precip"> 1.2</span> mm
+							</li>
+							<li class="list-group-item">
+								Humidity
+								<span id="current-humid"> 95</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./main.js"></script>
+	</body>
+
+</html>
