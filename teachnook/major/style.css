@@ -63,14 +63,17 @@ button:hover {
 }
 
 .flex {
-	display: block ruby;
+	display: flex;
 	align-items: center;
 	margin: 0 auto;
+	width: fit-content;
+		padding-bottom: 0.5rem;
 }
 
 .description {
 	text-transform: capitalize;
-	margin-left: 8px;
+	margin-left: 1rem;
+		font-size: 1.5rem;
 }
 
 .weather .loading {
@@ -92,6 +95,8 @@ button:hover {
 .add-data {
 	color: fff !important;
 	background: rgba(0, 0, 0, 0.2) !important;
+	width: fit-content;
+		margin: auto;
 }
 
 
@@ -109,8 +114,13 @@ button:hover {
 	color: aliceblue;
 }
 
+.list-group-item span {
+	font-size: 1.5rem;
+	padding: 5px;
+}
 h1 {
 	padding: 1.8rem;
+	margin-bottom: 0 !important;
 }
 
 #temp-c {
@@ -133,6 +143,7 @@ h1 {
 		padding: 0.2rem 1rem;
 		border: 1px dotted gray;
 		border-radius: 20px;
+		box-shadow: 0 4px 4px 0 rgba(200, 200, 200, 0.2), 0 6px 10px 0 rgba(200, 200, 200, 0.19);
 	}
 	
 	.forecast-link:hover {
@@ -181,14 +192,22 @@ h1 {
 	border-radius: 20px;
 	padding: 5px 40px;
 	margin: 5px 0px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .forecast-info-container {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	padding-top: 0.5rem;
+	padding-top: 1rem;
 	padding-bottom: 0.5rem;
 	border: 1px solid gray;
 	border-radius: 20px;
 	background-color: azure;
+}
+.forecast-info-container h2 {
+	margin-top: 1.8rem;
+}
+
+.btn-close {
+	color: red;
 }
