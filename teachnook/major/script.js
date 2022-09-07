@@ -15,8 +15,9 @@ let weather = {
 
   displayWeather: (data) => {
     console.log(data);
-    document.querySelector('#temp').innerText = data.current.temp_c + '°';
-    document.querySelector('#time').innerHTML = data.current.last_updated.split(' ')[1];
+    document.querySelector('#temp-c').innerText = data.current.temp_c + '°';
+    document.querySelector('#temp-f').innerText = data.current.temp_f + '°';
+    document.querySelector('#time').innerHTML = data.current.last_updated;
     document.querySelector('#city').innerHTML = data.location.name;
     document.querySelector('#region').innerHTML = data.location.region;
     document.querySelector('#country').innerHTML = data.location.country;
@@ -41,4 +42,4 @@ document.querySelector('.search-bar').addEventListener('keyup', function (event)
   }
 });
 
-weather.fetchWeather('los angeles');
+weather.fetchWeather('new delhi');

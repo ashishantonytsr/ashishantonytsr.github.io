@@ -112,7 +112,12 @@ h1 {
 	padding: 2rem;
 }
 
-#temp {
+#temp-c {
+	font-size: 3.8rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#temp-f {
 	font-size: 3.8rem;
 	font-family: 'Montserrat', sans-serif;
 }
