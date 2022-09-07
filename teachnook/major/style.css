@@ -6,16 +6,16 @@ body {
 	align-items: center;
 	height: 100vh;
 	margin: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	background: #222;
-	background-image: url('https://source.unsplash.com/1600x900/?landscape');
+	/* background-image: url('https://source.unsplash.com/1600x900/?landscape'); */
 	font-size: 120%;
 }
 
 .weather-card {
 	background: #000000d0;
 	color: white;
-	padding: 2em;
+	padding: 1.8em;
 	border-radius: 30px;
 	width: 100%;
 	max-width: 420px;
@@ -28,7 +28,10 @@ body {
 	justify-content: center;
 }
 
-button {
+#search-button {
+	color: white;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
 	margin: 0.5em;
 	border-radius: 50%;
 	border: none;
@@ -36,9 +39,6 @@ button {
 	width: 44px;
 	outline: none;
 	background: #7c7c7c2b;
-	color: white;
-	cursor: pointer;
-	transition: 0.2s ease-in-out;
 }
 
 input.search-bar {
@@ -63,8 +63,9 @@ button:hover {
 }
 
 .flex {
-	display: flex;
+	display: block ruby;
 	align-items: center;
+	margin: 0 auto;
 }
 
 .description {
@@ -109,7 +110,7 @@ button:hover {
 }
 
 h1 {
-	padding: 2rem;
+	padding: 1.8rem;
 }
 
 #temp-c {
@@ -118,10 +119,76 @@ h1 {
 }
 
 #temp-f {
-	font-size: 3.8rem;
-	font-family: 'Montserrat', sans-serif;
+	font-size: 3.4rem;
+		font-family: 'Montserrat', sans-serif;
+	}
+	
+	#datetime {
+		font-family: 'Montserrat', sans-serif;
+	}
+	
+	.forecast-link {
+		color: aliceblue;
+		text-decoration: none;
+		padding: 0.2rem 1rem;
+		border: 1px dotted gray;
+		border-radius: 20px;
+	}
+	
+	.forecast-link:hover {
+		color: antiquewhite;
+		cursor: pointer;
+	}
+	
+	.forecast-container {
+		margin-top: 1.2rem;
+	}
+	
+	.weather-forecast {
+		visibility: hidden;
+	}
+	
+	.forecast-avg-temp-c,
+	.forecast-avg-temp-f {
+		font-size: 1.8rem;
+		font-family: 'Montserrat', sans-serif;
+	}
+	
+	.forecast-min-temp-c,
+	.forecast-min-temp-f {
+		font-size: 1.2rem;
+		font-family: 'Montserrat', sans-serif;
+	}
+	
+	.forecast-max-temp-c,
+	.forecast-max-temp-f {
+		font-size: 1.2rem;
+		font-family: 'Montserrat', sans-serif;
 }
 
-#time {
+.temp {
+	font-size: 1.2rem;
 	font-family: 'Montserrat', sans-serif;
+}
+#datetime-container {
+	margin: 0;
+}
+
+.forecast-datetime {
+	font-size: larger;
+	font-family: sans-serif;
+	border: 1px dotted gray;
+	border-radius: 20px;
+	padding: 5px 40px;
+	margin: 5px 0px;
+}
+
+.forecast-info-container {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	border: 1px solid gray;
+	border-radius: 20px;
+	background-color: azure;
 }

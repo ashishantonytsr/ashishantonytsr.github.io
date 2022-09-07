@@ -35,17 +35,17 @@
 				</button>
 			</div>
 			<div align="center">
-				<span id="time">00:00</span>
+				<span id="datetime">00:00</span>
 			</div>
 			<div class="weather loading">
-				<h2>
-					<span id="city"></span>,
-					<span id="region"></span><br>
+				<h2 align="center" style="padding-top: 0.8rem;">
+					<span id="city">New Delhi</span>,
+					<span id="region">Delhi</span><br>
+					<span id="country" style="font-size: smaller;">India</span>
 				</h2>
-				<span id="country"></span>
 				<h1 align="center">
-					<span id="temp-c">°</span> C <br>
-					<span id="temp-f">°</span> F
+						<span id="temp-c">22.3°</span> C <br>
+						<span id="temp-f">77.4°</span> F
 				</h1>
 				<div class="flex">
 					<img src="" alt="" id="icon" />
@@ -63,10 +63,224 @@
 							<span id="wind"> </span>Km/hr
 						</li>
 					</ul>
-
+				</div>
+				
+				<div class='forecast-container' align="center">
+					<a class="forecast-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+						Weather Forecast
+					</a>
 				</div>
 			</div>
 		</div>
 	</body>
+
+<!-- Weather forecast modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable">
+		<div class="modal-content" style="background-color: #222;">
+			<div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel" style="color: beige;">Weather Forecast</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-body">
+					<div class="container-fluid">
+
+						<div class="row">
+							<!-- Day 1 -->
+							<div class="col-md-12 col-xs-12 forecast-info-container">
+								<div align="center" id="datetime-container">
+									<span class="forecast-datetime">00:00</span>
+								</div>
+								<h2 align="center">
+									Temperature
+									<div class="row">
+										<div class="col-4">
+											<span class="temp">Min</span><br>
+											<span class="forecast-min-temp-c"></span><br>
+											<span class="forecast-min-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Average</span><br>
+											<span class="forecast-avg-temp-c"></span><br>
+											<span class="forecast-avg-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Max</span><br>
+											<span class="forecast-max-temp-c"></span><br>
+											<span class="forecast-max-temp-f"></span>
+										</div>
+									</div>
+								</h2>
+								<div align="center" class="flex">
+									<img src="" alt="" class="forecast-icon" />
+									<h2 class="forecast-description"></h2>
+								</div>
+							</div>
+
+							<!-- Day 2 -->
+							<div class="col-md-12 col-xs-12 forecast-info-container">
+								<div align="center" id="datetime-container">
+									<span class="forecast-datetime">00:00</span>
+								</div>
+								<h2 align="center">
+									Temperature
+									<div class="row">
+										<div class="col-4">
+											<span class="temp">Min</span><br>
+											<span class="forecast-min-temp-c"></span><br>
+											<span class="forecast-min-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Average</span><br>
+											<span class="forecast-avg-temp-c"></span><br>
+											<span class="forecast-avg-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Max</span><br>
+											<span class="forecast-max-temp-c"></span><br>
+											<span class="forecast-max-temp-f"></span>
+										</div>
+									</div>
+								</h2>
+								<div align="center" class="flex">
+									<img src="" alt="" class="forecast-icon" />
+									<h2 class="forecast-description"></h2>
+								</div>
+							</div>
+
+							<!-- Day 3 -->
+							<div class="col-md-12 col-xs-12 forecast-info-container">
+								<div align="center" id="datetime-container">
+									<span class="forecast-datetime">00:00</span>
+								</div>
+								<h2 align="center">
+									Temperature
+									<div class="row">
+										<div class="col-4">
+											<span class="temp">Min</span><br>
+											<span class="forecast-min-temp-c"></span><br>
+											<span class="forecast-min-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Average</span><br>
+											<span class="forecast-avg-temp-c"></span><br>
+											<span class="forecast-avg-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Max</span><br>
+											<span class="forecast-max-temp-c"></span><br>
+											<span class="forecast-max-temp-f"></span>
+										</div>
+									</div>
+								</h2>
+								<div align="center" class="flex">
+									<img src="" alt="" class="forecast-icon" />
+									<h2 class="forecast-description"></h2>
+								</div>
+							</div>
+
+							<!-- Day 4 -->
+							<div class="col-md-12 col-xs-12 forecast-info-container">
+								<div align="center" id="datetime-container">
+									<span class="forecast-datetime">00:00</span>
+								</div>
+								<h2 align="center">
+									Temperature
+									<div class="row">
+										<div class="col-4">
+											<span class="temp">Min</span><br>
+											<span class="forecast-min-temp-c"></span><br>
+											<span class="forecast-min-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Average</span><br>
+											<span class="forecast-avg-temp-c"></span><br>
+											<span class="forecast-avg-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Max</span><br>
+											<span class="forecast-max-temp-c"></span><br>
+											<span class="forecast-max-temp-f"></span>
+										</div>
+									</div>
+								</h2>
+								<div align="center" class="flex">
+									<img src="" alt="" class="forecast-icon" />
+									<h2 class="forecast-description"></h2>
+								</div>
+							</div>
+
+							<!-- Day 5 -->
+							<div class="col-md-12 col-xs-12 forecast-info-container">
+								<div align="center" id="datetime-container">
+									<span class="forecast-datetime">00:00</span>
+								</div>
+								<h2 align="center">
+									Temperature
+									<div class="row">
+										<div class="col-4">
+											<span class="temp">Min</span><br>
+											<span class="forecast-min-temp-c"></span><br>
+											<span class="forecast-min-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Average</span><br>
+											<span class="forecast-avg-temp-c"></span><br>
+											<span class="forecast-avg-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Max</span><br>
+											<span class="forecast-max-temp-c"></span><br>
+											<span class="forecast-max-temp-f"></span>
+										</div>
+									</div>
+								</h2>
+								<div align="center" class="flex">
+									<img src="" alt="" class="forecast-icon" />
+									<h2 class="forecast-description"></h2>
+								</div>
+							</div>
+
+							<!-- Day 6 -->
+							<div class="col-md-12 col-xs-12 forecast-info-container">
+								<div align="center" id="datetime-container">
+									<span class="forecast-datetime">00:00</span>
+								</div>
+								<h2 align="center">
+									Temperature
+									<div class="row">
+										<div class="col-4">
+											<span class="temp">Min</span><br>
+											<span class="forecast-min-temp-c"></span><br>
+											<span class="forecast-min-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Average</span><br>
+											<span class="forecast-avg-temp-c"></span><br>
+											<span class="forecast-avg-temp-f"></span>
+										</div>
+										<div class="col-4">
+											<span class="temp">Max</span><br>
+											<span class="forecast-max-temp-c"></span><br>
+											<span class="forecast-max-temp-f"></span>
+										</div>
+									</div>
+								</h2>
+								<div align="center" class="flex">
+									<img src="" alt="" class="forecast-icon" />
+									<h2 class="forecast-description"></h2>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 </html>
