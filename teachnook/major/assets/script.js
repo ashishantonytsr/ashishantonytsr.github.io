@@ -20,7 +20,7 @@ let weather = {
     console.log(data);
     document.querySelector('#temp-c').innerText = data.current.temp_c + '°';
     document.querySelector('#temp-f').innerText = data.current.temp_f + '°';
-    document.querySelector('#datetime').innerHTML = data.current.last_updated;
+    document.querySelector('#time').innerHTML = data.current.last_updated.split(' ')[1];
     document.querySelector('#city').innerHTML = data.location.name;
     document.querySelector('#region').innerHTML = data.location.region;
     document.querySelector('#country').innerHTML = data.location.country;
@@ -32,125 +32,26 @@ let weather = {
 
   displayForecast: (data) => {
     // weather forecast
-    // day 1
-    document.getElementsByClassName('forecast-min-temp-c')[0].innerText =
-      data.forecast.forecastday[0].day.mintemp_c + '°C';
-    document.getElementsByClassName('forecast-min-temp-f')[0].innerText =
-      data.forecast.forecastday[0].day.mintemp_f + '°F';
-    document.getElementsByClassName('forecast-avg-temp-c')[0].innerText =
-      data.forecast.forecastday[0].day.avgtemp_c + '°C';
-    document.getElementsByClassName('forecast-avg-temp-f')[0].innerText =
-      data.forecast.forecastday[0].day.avgtemp_f + '°F';
-    document.getElementsByClassName('forecast-max-temp-c')[0].innerText =
-      data.forecast.forecastday[0].day.maxtemp_c + '°C';
-    document.getElementsByClassName('forecast-max-temp-f')[0].innerText =
-      data.forecast.forecastday[0].day.maxtemp_f + '°F';
-    document.getElementsByClassName('forecast-datetime')[0].innerText = data.forecast.forecastday[0].date;
-    document
-      .getElementsByClassName('forecast-icon')[0]
-      .setAttribute('src', data.forecast.forecastday[0].day.condition.icon);
-    document.getElementsByClassName('forecast-description')[0].innerText =
-      data.forecast.forecastday[0].day.condition.text;
-
-    // day 2
-    document.getElementsByClassName('forecast-min-temp-c')[1].innerText =
-      data.forecast.forecastday[1].day.mintemp_c + '°C';
-    document.getElementsByClassName('forecast-min-temp-f')[1].innerText =
-      data.forecast.forecastday[1].day.mintemp_f + '°F';
-    document.getElementsByClassName('forecast-avg-temp-c')[1].innerText =
-      data.forecast.forecastday[1].day.avgtemp_c + '°C';
-    document.getElementsByClassName('forecast-avg-temp-f')[1].innerText =
-      data.forecast.forecastday[1].day.avgtemp_f + '°F';
-    document.getElementsByClassName('forecast-max-temp-c')[1].innerText =
-      data.forecast.forecastday[1].day.maxtemp_c + '°C';
-    document.getElementsByClassName('forecast-max-temp-f')[1].innerText =
-      data.forecast.forecastday[1].day.maxtemp_f + '°F';
-    document.getElementsByClassName('forecast-datetime')[1].innerText = data.forecast.forecastday[1].date;
-    document
-      .getElementsByClassName('forecast-icon')[1]
-      .setAttribute('src', data.forecast.forecastday[1].day.condition.icon);
-    document.getElementsByClassName('forecast-description')[1].innerText =
-      data.forecast.forecastday[1].day.condition.text;
-
-    // day 3
-    document.getElementsByClassName('forecast-min-temp-c')[2].innerText =
-      data.forecast.forecastday[2].day.mintemp_c + '°C';
-    document.getElementsByClassName('forecast-min-temp-f')[2].innerText =
-      data.forecast.forecastday[2].day.mintemp_f + '°F';
-    document.getElementsByClassName('forecast-avg-temp-c')[2].innerText =
-      data.forecast.forecastday[2].day.avgtemp_c + '°C';
-    document.getElementsByClassName('forecast-avg-temp-f')[2].innerText =
-      data.forecast.forecastday[2].day.avgtemp_f + '°F';
-    document.getElementsByClassName('forecast-max-temp-c')[2].innerText =
-      data.forecast.forecastday[2].day.maxtemp_c + '°C';
-    document.getElementsByClassName('forecast-max-temp-f')[2].innerText =
-      data.forecast.forecastday[2].day.maxtemp_f + '°F';
-    document.getElementsByClassName('forecast-datetime')[2].innerText = data.forecast.forecastday[2].date;
-    document
-      .getElementsByClassName('forecast-icon')[2]
-      .setAttribute('src', data.forecast.forecastday[2].day.condition.icon);
-    document.getElementsByClassName('forecast-description')[2].innerText =
-      data.forecast.forecastday[2].day.condition.text;
-
-    // day 4
-    document.getElementsByClassName('forecast-min-temp-c')[3].innerText =
-      data.forecast.forecastday[3].day.mintemp_c + '°C';
-    document.getElementsByClassName('forecast-min-temp-f')[3].innerText =
-      data.forecast.forecastday[3].day.mintemp_f + '°F';
-    document.getElementsByClassName('forecast-avg-temp-c')[3].innerText =
-      data.forecast.forecastday[3].day.avgtemp_c + '°C';
-    document.getElementsByClassName('forecast-avg-temp-f')[3].innerText =
-      data.forecast.forecastday[3].day.avgtemp_f + '°F';
-    document.getElementsByClassName('forecast-max-temp-c')[3].innerText =
-      data.forecast.forecastday[3].day.maxtemp_c + '°C';
-    document.getElementsByClassName('forecast-max-temp-f')[3].innerText =
-      data.forecast.forecastday[3].day.maxtemp_f + '°F';
-    document.getElementsByClassName('forecast-datetime')[3].innerText = data.forecast.forecastday[3].date;
-    document
-      .getElementsByClassName('forecast-icon')[3]
-      .setAttribute('src', data.forecast.forecastday[3].day.condition.icon);
-    document.getElementsByClassName('forecast-description')[3].innerText =
-      data.forecast.forecastday[3].day.condition.text;
-
-    // day 5
-    document.getElementsByClassName('forecast-min-temp-c')[4].innerText =
-      data.forecast.forecastday[4].day.mintemp_c + '°C';
-    document.getElementsByClassName('forecast-min-temp-f')[4].innerText =
-      data.forecast.forecastday[4].day.mintemp_f + '°F';
-    document.getElementsByClassName('forecast-avg-temp-c')[4].innerText =
-      data.forecast.forecastday[4].day.avgtemp_c + '°C';
-    document.getElementsByClassName('forecast-avg-temp-f')[4].innerText =
-      data.forecast.forecastday[4].day.avgtemp_f + '°F';
-    document.getElementsByClassName('forecast-max-temp-c')[4].innerText =
-      data.forecast.forecastday[4].day.maxtemp_c + '°C';
-    document.getElementsByClassName('forecast-max-temp-f')[4].innerText =
-      data.forecast.forecastday[4].day.maxtemp_f + '°F';
-    document.getElementsByClassName('forecast-datetime')[4].innerText = data.forecast.forecastday[4].date;
-    document
-      .getElementsByClassName('forecast-icon')[4]
-      .setAttribute('src', data.forecast.forecastday[4].day.condition.icon);
-    document.getElementsByClassName('forecast-description')[4].innerText =
-      data.forecast.forecastday[4].day.condition.text;
-
-    // day 6
-    document.getElementsByClassName('forecast-min-temp-c')[5].innerText =
-      data.forecast.forecastday[5].day.mintemp_c + '°C';
-    document.getElementsByClassName('forecast-min-temp-f')[5].innerText =
-      data.forecast.forecastday[5].day.mintemp_f + '°F';
-    document.getElementsByClassName('forecast-avg-temp-c')[5].innerText =
-      data.forecast.forecastday[5].day.avgtemp_c + '°C';
-    document.getElementsByClassName('forecast-avg-temp-f')[5].innerText =
-      data.forecast.forecastday[5].day.avgtemp_f + '°F';
-    document.getElementsByClassName('forecast-max-temp-c')[5].innerText =
-      data.forecast.forecastday[5].day.maxtemp_c + '°C';
-    document.getElementsByClassName('forecast-max-temp-f')[5].innerText =
-      data.forecast.forecastday[5].day.maxtemp_f + '°F';
-    document.getElementsByClassName('forecast-datetime')[5].innerText = data.forecast.forecastday[5].date;
-    document
-      .getElementsByClassName('forecast-icon')[5]
-      .setAttribute('src', data.forecast.forecastday[5].day.condition.icon);
-    document.getElementsByClassName('forecast-description')[5].innerText =
-      data.forecast.forecastday[5].day.condition.text;
+    for (let i = 1; i < 7; i++) {
+      document.getElementsByClassName('forecast-min-temp-c')[i - 1].innerText =
+        data.forecast.forecastday[i].day.mintemp_c + '°C';
+      document.getElementsByClassName('forecast-min-temp-f')[i - 1].innerText =
+        data.forecast.forecastday[i].day.mintemp_f + '°F';
+      document.getElementsByClassName('forecast-avg-temp-c')[i - 1].innerText =
+        data.forecast.forecastday[i].day.avgtemp_c + '°C';
+      document.getElementsByClassName('forecast-avg-temp-f')[i - 1].innerText =
+        data.forecast.forecastday[i].day.avgtemp_f + '°F';
+      document.getElementsByClassName('forecast-max-temp-c')[i - 1].innerText =
+        data.forecast.forecastday[i].day.maxtemp_c + '°C';
+      document.getElementsByClassName('forecast-max-temp-f')[i - 1].innerText =
+        data.forecast.forecastday[i].day.maxtemp_f + '°F';
+      document.getElementsByClassName('forecast-datetime')[i - 1].innerText = data.forecast.forecastday[i].date;
+      document
+        .getElementsByClassName('forecast-icon')
+        [i - 1].setAttribute('src', data.forecast.forecastday[i].day.condition.icon);
+      document.getElementsByClassName('forecast-description')[i - 1].innerText =
+        data.forecast.forecastday[i].day.condition.text;
+    }
   },
 
   search: function () {
