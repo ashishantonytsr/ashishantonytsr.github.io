@@ -55,6 +55,10 @@ input.search-bar {
 	font-size: 105%;
 	width: calc(100% - 90px);
 }
+.search-bar::placeholder {
+	color: aliceblue;
+	font-weight: 500;
+}
 
 button:hover {
 	background: #7c7c7c6b;
@@ -86,12 +90,13 @@ button:hover {
 	justify-content: right;
 }
 
-.wind-data {
+.wind-data,
+.humidity-data {
 	display: contents;
 }
 .description {
 	text-transform: capitalize;
-	/* margin-left: 1rem; */
+	text-align: center;
 	font-size: 1.5rem;
 }
 
@@ -152,27 +157,27 @@ h1 {
 
 #temp-f,
 #temp-bar {
-	font-size: 3.2rem;
+	font-size: 3rem;
 	font-family: 'Montserrat', sans-serif;
 }
 
-#time {
-	font-family: 'Montserrat', sans-serif;
-}
 
 .forecast-link {
-	color: aliceblue;
+	color: antiquewhite;
+		font-family: 'Exo', sans-serif;
 	text-decoration: none;
+	cursor: pointer;
 	padding: 0.5rem 1.2rem;
-	border: 1px dotted gray;
+	border: 1px transparent #eee;
 	border-radius: 20px;
-	background: rgba(64, 64, 64, 0.6);
+	background: #7c7c7c2b;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .forecast-link:hover {
 	color: antiquewhite;
-	cursor: pointer;
+	font-weight: bold;
+		box-shadow: 0 4px 20px 0 rgba(32, 32, 32, 0.3), 0 6px 20px 0 rgba(32, 32, 32, 0.3);
 }
 
 .forecast-container {
@@ -209,6 +214,9 @@ h1 {
 #datetime-container {
 	margin: 0;
 }
+.last-updated {
+	font-size: 1.1rem;
+}
 
 .forecast-datetime {
 	font-size: larger;
@@ -233,19 +241,29 @@ h1 {
 .forecast-info-container h2 {
 	margin-top: 1.8rem;
 }
-
-.btn-close {
-	background: rgba(180, 180, 180, 0.8) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat !important;
-	}
 .modal-title {
 	padding: .18rem .8rem;
 	border: 1px transparent;
-	border-radius: 8px;
-	color: #222 !important;
+	border-radius: 20px;
+		color: #fff !important;
 	font-family: 'Exo', sans-serif;
-	font-weight: bold;
-	background-color: rgba(180, 180, 180, 0.5);
+	background: #7c7c7c2b;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.close-icon {
+	width: 32px;
+	height: 32px;
+	margin: 0.4rem;
+	padding: 0.4rem;
+	cursor: pointer;
+	border: 1px transparent;
+	border-radius: 20px;
+	background: #7c7c7c2b;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close-icon:hover {
+	padding: 0.3rem;
 }
 .modal-dialog {
 	max-width: 600px !important;
@@ -257,6 +275,6 @@ h1 {
 
 	#temp-f,
 	#temp-bar {
-		font-size: 2.2rem !important;
+		font-size: 2rem !important;
 	}
 }
