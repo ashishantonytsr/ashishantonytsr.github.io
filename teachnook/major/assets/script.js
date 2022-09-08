@@ -26,7 +26,7 @@ let weather = {
     document.querySelector('#country').innerHTML = data.location.country;
     document.querySelector('#icon').setAttribute('src', data.current.condition.icon);
     document.querySelector('.description').innerHTML = data.current.condition.text;
-    document.querySelector('#wind').innerHTML = data.current.wind_kph + ' Km/hr';
+    document.querySelector('#wind').innerHTML = data.current.wind_kph + ' kph';
     document.querySelector('#humidity').innerHTML = data.current.humidity + ' %';
   },
 

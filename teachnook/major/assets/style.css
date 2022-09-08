@@ -17,7 +17,7 @@ body {
 .weather-card {
 	background: rgba(48, 48, 48, 0.8);
 	color: white;
-	padding: 1.8em;
+	padding: 1rem;
 	border-radius: 30px;
 	width: 100%;
 	max-width: fit-content;
@@ -53,7 +53,7 @@ input.search-bar {
 	color: white;
 	font-family: inherit;
 	font-size: 105%;
-	width: calc(100% - 50px);
+	width: calc(100% - 90px);
 }
 
 button:hover {
@@ -72,10 +72,22 @@ button:hover {
 	width: fit-content;
 }
 
+.flex h2 {
+	margin: 0 !important;
+}
 #humidity,
 #wind {
 	font-size: 1.3rem;
 	padding-left: 1rem;
+}
+.humidity,
+.wind {
+	display: inherit;
+	justify-content: right;
+}
+
+.wind-data {
+	display: contents;
 }
 .description {
 	text-transform: capitalize;
@@ -129,7 +141,7 @@ button:hover {
 }
 
 h1 {
-	padding: 1.5rem 1rem;
+	padding: 1rem 0 1.5rem 0;
 	margin-bottom: 0 !important;
 }
 
@@ -138,7 +150,8 @@ h1 {
 	font-family: 'Montserrat', sans-serif;
 }
 
-#temp-f {
+#temp-f,
+#temp-bar {
 	font-size: 3.2rem;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -224,17 +237,26 @@ h1 {
 .btn-close {
 	background: rgba(180, 180, 180, 0.8) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat !important;
 	}
-		.modal-title {
-			padding: .18rem .8rem;
-			border: 1px transparent;
-			border-radius: 8px;
-			color: #222 !important;
-			font-family: 'Exo', sans-serif;
-			font-weight: bold;
-			background-color: rgba(180, 180, 180, 0.5);
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		}
-	
-		.modal-dialog {
-			max-width: 600px !important;
-		}
+.modal-title {
+	padding: .18rem .8rem;
+	border: 1px transparent;
+	border-radius: 8px;
+	color: #222 !important;
+	font-family: 'Exo', sans-serif;
+	font-weight: bold;
+	background-color: rgba(180, 180, 180, 0.5);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modal-dialog {
+	max-width: 600px !important;
+}
+@media screen and (max-width: 400px) {
+	#temp-c {
+		font-size: 2.8rem !important;
+	}
+
+	#temp-f,
+	#temp-bar {
+		font-size: 2.2rem !important;
+	}
+}
