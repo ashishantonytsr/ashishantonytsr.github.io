@@ -36,18 +36,18 @@ let weather = {
       document.getElementsByClassName('forecast-min-temp-c')[day].innerText =
         data.forecast.forecastday[day].day.mintemp_c + '°C';
       document.getElementsByClassName('forecast-min-temp-f')[day].innerText =
-        data.forecast.forecastday[day].day.mintemp_f + '°F';
+			` / ${data.forecast.forecastday[day].day.mintemp_f}°F`;
       document.getElementsByClassName('forecast-avg-temp-c')[day].innerText =
         data.forecast.forecastday[day].day.avgtemp_c + '°C';
       document.getElementsByClassName('forecast-avg-temp-f')[day].innerText =
-        data.forecast.forecastday[day].day.avgtemp_f + '°F';
+			` / ${data.forecast.forecastday[day].day.avgtemp_f}°F`;
       document.getElementsByClassName('forecast-max-temp-c')[day].innerText =
         data.forecast.forecastday[day].day.maxtemp_c + '°C';
       document.getElementsByClassName('forecast-max-temp-f')[day].innerText =
-        data.forecast.forecastday[day].day.maxtemp_f + '°F';
+			` / ${data.forecast.forecastday[day].day.maxtemp_f}°F`;
       document.getElementsByClassName('forecast-datetime')[day].innerText = 
 				data.forecast.forecastday[day].date;
-			document.getElementsByClassName('forecast-day')[day].innerText = 
+      document.getElementsByClassName('forecast-day')[day].innerText = 
 				weather.dayFetch(data.forecast.forecastday[day].date);
       document.getElementsByClassName('forecast-icon')[day]
 				.setAttribute('src', data.forecast.forecastday[day].day.condition.icon);
@@ -57,10 +57,10 @@ let weather = {
 			for (let hour = 0; hour < 6; hour++, i++){
 				document.getElementsByClassName('hour')[i].innerText =
 					data.forecast.forecastday[day].hour[4*hour].time.split(' ')[1];
-				document.getElementsByClassName('hour-temp-c')[i].innerText =
-					data.forecast.forecastday[day].hour[4*hour].temp_c + '°C';
-				document.getElementsByClassName('hour-temp-f')[i].innerText =
-					data.forecast.forecastday[day].hour[4*hour].temp_f + '°F';
+				document.getElementsByClassName('hour-temp-c')[i].innerHTML =
+				`${data.forecast.forecastday[day].hour[4*hour].temp_c}°C`;
+				document.getElementsByClassName('hour-temp-f')[i].innerHTML =
+					` / ${data.forecast.forecastday[day].hour[4*hour].temp_f}°F`;
 				document
 					.getElementsByClassName('forecast-icon-hour')[i]
 					.setAttribute('src', data.forecast.forecastday[day].hour[4*hour].condition.icon);

@@ -20,7 +20,7 @@ body {
 	padding: 1rem;
 	border-radius: 30px;
 	width: 100%;
-	max-width: fit-content;
+	max-width: max-content;
 	margin: 1em;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
@@ -87,7 +87,7 @@ button:hover {
 }
 .humidity,
 .wind {
-	display: inherit;
+	display: contents;
 	justify-content: right;
 }
 
@@ -251,6 +251,7 @@ h1 {
 	border: 1px solid gray;
 	border-radius: 20px;
 	background-color: azure;
+	/* background-color: cornsilk; */
 }
 
 .modal-body{
@@ -291,6 +292,7 @@ h1 {
 	margin: 1.8rem 0.5rem 0 0.5rem;
 	border: 1px transparent;
 	border-radius: 20px;
+	background-color: azure;
 	box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.19), -2px -2px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -321,8 +323,9 @@ h1 {
 .hour-container{
 	padding: 0.5rem 0.2rem;
 	margin-bottom: 0.5rem;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+	background-color: aliceblue;
+	border: 3px solid azure;
+	border-radius: 30px;
 }
 .hour-container h2{
 	margin-bottom: 1rem;
@@ -330,12 +333,13 @@ h1 {
 
 .hourly-forecast-container{
 	margin: 0.9rem 0 !important;
+	background-color: azure;
 	border: 1px transparent;
 	border-radius: 20px;
 	box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.19), -2px -2px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 590px) {
 	#temp-c {
 		font-size: 2.8rem !important;
 	}
