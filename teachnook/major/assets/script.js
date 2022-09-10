@@ -47,6 +47,8 @@ let weather = {
         data.forecast.forecastday[day].day.maxtemp_f + '°F';
       document.getElementsByClassName('forecast-datetime')[day].innerText = 
 				data.forecast.forecastday[day].date;
+			document.getElementsByClassName('forecast-day')[day].innerText = 
+				weather.dayFetch(data.forecast.forecastday[day].date);
       document.getElementsByClassName('forecast-icon')[day]
 				.setAttribute('src', data.forecast.forecastday[day].day.condition.icon);
       document.getElementsByClassName('forecast-description')[day].innerText =
@@ -67,6 +69,13 @@ let weather = {
 			}
 		}
   },
+
+	dayFetch : function (date) {
+		const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+		const thisDay = new Date(date);
+		return weekday[thisDay.getDay()]
+	},
 
   search: function () {
     this.fetchWeather(document.querySelector('.search-bar').value);

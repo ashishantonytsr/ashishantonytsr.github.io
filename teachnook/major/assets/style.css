@@ -77,6 +77,7 @@ button:hover {
 }
 
 .flex h2 {
+	font-size: 1.3rem;
 	margin: 0 !important;
 }
 #humidity,
@@ -188,43 +189,57 @@ h1 {
 	visibility: hidden;
 }
 
-.forecast-avg-temp-c,
+.forecast-avg-temp-c {
+	font-size: 1.75rem;
+}
 .forecast-avg-temp-f {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
+}
+
+.forecast-min-temp-f,
+.forecast-max-temp-f {
+	font-size: 1rem;
 	font-family: 'Montserrat', sans-serif;
 }
 
 .forecast-min-temp-c,
-.forecast-min-temp-f {
+.forecast-max-temp-c {
 	font-size: 1.2rem;
 	font-family: 'Montserrat', sans-serif;
 }
 
-.forecast-max-temp-c,
-.forecast-max-temp-f {
-	font-size: 1.2rem;
-	font-family: 'Montserrat', sans-serif;
+.forecast-icon{
+	width: 50px;
+	height: 50px;
 }
 
 .temp {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-family: 'Montserrat', sans-serif;
 }
 
 #datetime-container {
-	margin: 0;
+	margin: 0 0.5rem;
 }
 .last-updated {
 	font-size: 1.1rem;
 }
 
-.forecast-datetime {
-	font-size: larger;
+.forecast-datetime{
+	float: left;
+}
+.forecast-day{
+	float: right;
+}
+
+.forecast-datetime,
+.forecast-day {
 	font-family: sans-serif;
 	border: 1px dotted gray;
 	border-radius: 20px;
-	padding: 5px 40px;
+	padding: 2px 10px;
 	margin: 5px 0px;
+	background: aliceblue;
 	box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.19), -2px -2px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -240,6 +255,9 @@ h1 {
 
 .modal-body{
 	padding: 0 1rem !important;
+}
+.modal-header{
+	padding: 0.5rem;
 }
 .modal-title {
 	padding: .18rem .8rem;
@@ -266,17 +284,7 @@ h1 {
 	padding: 0.3rem;
 }
 .modal-dialog {
-	max-width: 600px !important;
-}
-@media screen and (max-width: 400px) {
-	#temp-c {
-		font-size: 2.8rem !important;
-	}
-
-	#temp-f,
-	#temp-bar {
-		font-size: 2rem !important;
-	}
+	max-width: 700px !important;
 }
 
 .forecast-general-info-container{
@@ -297,16 +305,24 @@ h1 {
 }
 
 .hourly-flex h6 {
+	display: inline;
 	margin: 0 !important;
 }
+
 .hour{
 	text-align: center;
+	font-size: 1.8rem;
 	margin-bottom: 0;
+}
+.hour-temp-f{
+	font-size: 1rem;
 }
 
 .hour-container{
-	padding: 1rem;
+	padding: 0.5rem 0.2rem;
 	margin-bottom: 0.5rem;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
 .hour-container h2{
 	margin-bottom: 1rem;
@@ -317,4 +333,22 @@ h1 {
 	border: 1px transparent;
 	border-radius: 20px;
 	box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.19), -2px -2px 6px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 475px) {
+	#temp-c {
+		font-size: 2.8rem !important;
+	}
+
+	#temp-f,
+	#temp-bar {
+		font-size: 2rem !important;
+	}
+
+	.forecast-avg-temp-f,
+	.forecast-max-temp-f,
+	.forecast-min-temp-f,
+	.hour-temp-f{
+		display: none;
+	}
 }
