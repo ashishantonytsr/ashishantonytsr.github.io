@@ -32,26 +32,40 @@ let weather = {
 
   displayForecast: (data) => {
     // weather forecast
-    for (let i = 1; i < 7; i++) {
-      document.getElementsByClassName('forecast-min-temp-c')[i - 1].innerText =
-        data.forecast.forecastday[i].day.mintemp_c + '°C';
-      document.getElementsByClassName('forecast-min-temp-f')[i - 1].innerText =
-        data.forecast.forecastday[i].day.mintemp_f + '°F';
-      document.getElementsByClassName('forecast-avg-temp-c')[i - 1].innerText =
-        data.forecast.forecastday[i].day.avgtemp_c + '°C';
-      document.getElementsByClassName('forecast-avg-temp-f')[i - 1].innerText =
-        data.forecast.forecastday[i].day.avgtemp_f + '°F';
-      document.getElementsByClassName('forecast-max-temp-c')[i - 1].innerText =
-        data.forecast.forecastday[i].day.maxtemp_c + '°C';
-      document.getElementsByClassName('forecast-max-temp-f')[i - 1].innerText =
-        data.forecast.forecastday[i].day.maxtemp_f + '°F';
-      document.getElementsByClassName('forecast-datetime')[i - 1].innerText = data.forecast.forecastday[i].date;
-      document
-        .getElementsByClassName('forecast-icon')
-        [i - 1].setAttribute('src', data.forecast.forecastday[i].day.condition.icon);
-      document.getElementsByClassName('forecast-description')[i - 1].innerText =
-        data.forecast.forecastday[i].day.condition.text;
-    }
+    for (let day = 0, i = 0; day <= 5; day++) {
+      document.getElementsByClassName('forecast-min-temp-c')[day].innerText =
+        data.forecast.forecastday[day].day.mintemp_c + '°C';
+      document.getElementsByClassName('forecast-min-temp-f')[day].innerText =
+        data.forecast.forecastday[day].day.mintemp_f + '°F';
+      document.getElementsByClassName('forecast-avg-temp-c')[day].innerText =
+        data.forecast.forecastday[day].day.avgtemp_c + '°C';
+      document.getElementsByClassName('forecast-avg-temp-f')[day].innerText =
+        data.forecast.forecastday[day].day.avgtemp_f + '°F';
+      document.getElementsByClassName('forecast-max-temp-c')[day].innerText =
+        data.forecast.forecastday[day].day.maxtemp_c + '°C';
+      document.getElementsByClassName('forecast-max-temp-f')[day].innerText =
+        data.forecast.forecastday[day].day.maxtemp_f + '°F';
+      document.getElementsByClassName('forecast-datetime')[day].innerText = 
+				data.forecast.forecastday[day].date;
+      document.getElementsByClassName('forecast-icon')[day]
+				.setAttribute('src', data.forecast.forecastday[day].day.condition.icon);
+      document.getElementsByClassName('forecast-description')[day].innerText =
+        data.forecast.forecastday[day].day.condition.text;
+
+			for (let hour = 0; hour < 6; hour++, i++){
+				document.getElementsByClassName('hour')[i].innerText =
+					data.forecast.forecastday[day].hour[4*hour].time.split(' ')[1];
+				document.getElementsByClassName('hour-temp-c')[i].innerText =
+					data.forecast.forecastday[day].hour[4*hour].temp_c + '°C';
+				document.getElementsByClassName('hour-temp-f')[i].innerText =
+					data.forecast.forecastday[day].hour[4*hour].temp_f + '°F';
+				document
+					.getElementsByClassName('forecast-icon-hour')[i]
+					.setAttribute('src', data.forecast.forecastday[day].hour[4*hour].condition.icon);
+				document.getElementsByClassName('forecast-description-hour')[i].innerText =
+					data.forecast.forecastday[day].hour[4*hour].condition.text;
+			}
+		}
   },
 
   search: function () {
