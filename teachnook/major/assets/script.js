@@ -55,12 +55,13 @@ let weather = {
         data.forecast.forecastday[day].day.condition.text;
 
 			for (let hour = 0; hour < 6; hour++, i++){
-				document.getElementsByClassName('hour')[i].innerText =
-					data.forecast.forecastday[day].hour[4*hour].time.split(' ')[1];
+				let hours = data.forecast.forecastday[day].hour[4*hour].time.split(' ')[1].split(':')[0];
+				let hourSuffix = hours >= 12 ? " PM":" AM"; 
+				hours = ((hours + 11) % 12 + 1) + hourSuffix;
+
+				document.getElementsByClassName('hour')[i].innerText = hours;
 				document.getElementsByClassName('hour-temp-c')[i].innerHTML =
 				`${data.forecast.forecastday[day].hour[4*hour].temp_c}°C`;
-				document.getElementsByClassName('hour-temp-f')[i].innerHTML =
-					` / ${data.forecast.forecastday[day].hour[4*hour].temp_f}°F`;
 				document
 					.getElementsByClassName('forecast-icon-hour')[i]
 					.setAttribute('src', data.forecast.forecastday[day].hour[4*hour].condition.icon);
