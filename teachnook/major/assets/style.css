@@ -20,13 +20,13 @@ body {
 
 .weather-card {
 	background: rgba(240, 248, 255, 0.85) !important;
-	padding: 1rem;
+	padding: 2rem;
 	border-radius: 30px;
 	display: grid;
 	width: 100%;
 	max-width: 600px;
 	/* height: 80vh; */
-	margin: 5rem 1rem;
+	margin: 3rem 1rem;
 	box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.2), 0 6px 20px 0 rgba(200, 200, 200, 0.1);
 }
 
@@ -251,20 +251,22 @@ h1 {
 .modal-content{
 	width: fit-content;
 	margin: 0 auto;
+	border-radius: 20px !important;
 }
 .modal-header{
 	padding: 0.5rem;
 }
 
 .modal-body{
-	padding: 5px !important;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .modal-title {
 	padding: .18rem .8rem;
 	border: 1px transparent;
 	border-radius: 20px;
-		color: #fff !important;
+	color: #fff !important;
 	font-family: 'Exo', sans-serif;
 	background: #7c7c7c2b;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
