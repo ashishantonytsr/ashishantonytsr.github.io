@@ -1,5 +1,5 @@
 let weather = {
-  api_key: '4ca72503760e4790a13140644220609',
+  api_key: 'b9a2235d8b69470187371250222109',
 
   fetchWeather: function (city) {
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=${this.api_key}&q=${city}&days=7`)
@@ -18,8 +18,8 @@ let weather = {
 
   displayWeather: (data) => {
     console.log(data);
-    document.querySelector('#temp-c').innerText = data.current.temp_c + '°';
-    document.querySelector('#temp-f').innerText = data.current.temp_f + '°';
+    document.querySelector('#temp-c').innerText = data.current.temp_c + '° C';
+    document.querySelector('#temp-f').innerText = ' / ' + data.current.temp_f + '° F';
     document.querySelector('#time').innerHTML = data.current.last_updated.split(' ')[1];
     document.querySelector('#city').innerHTML = data.location.name;
     document.querySelector('#region').innerHTML = data.location.region;
@@ -30,7 +30,7 @@ let weather = {
     document.querySelector('#humidity').innerHTML = data.current.humidity + ' %';
   },
 
-  displayForecast: (data) => {
+	displayForecast: (data) => {
     // weather forecast
     for (let day = 0, i = 0; day <= 5; day++) {
       document.getElementsByClassName('forecast-min-temp-c')[day].innerText =
@@ -61,7 +61,7 @@ let weather = {
 
 				document.getElementsByClassName('hour')[i].innerText = hours;
 				document.getElementsByClassName('hour-temp-c')[i].innerHTML =
-				`${data.forecast.forecastday[day].hour[4*hour].temp_c}°C`;
+					`${data.forecast.forecastday[day].hour[4*hour].temp_c}°C`;
 				document
 					.getElementsByClassName('forecast-icon-hour')[i]
 					.setAttribute('src', data.forecast.forecastday[day].hour[4*hour].condition.icon);
