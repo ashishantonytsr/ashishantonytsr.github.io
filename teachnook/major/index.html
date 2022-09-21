@@ -21,7 +21,7 @@
 		<script src="./assets/script.js" defer></script>
 
 		<!-- favicon -->
-		<link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">  
+		<link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon"> 
 	</head>
 
 	<body>
@@ -84,27 +84,42 @@
 					</ul>
 				</div>
 				
-				<div class='forecast-container' align="center">
-					<a class="forecast-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-						Weather Forecast
-					</a>
+				<!-- Forecast links -->
+				<div class="row">
+					<div class="col-4 col-sm-2 col-md-2 forecast-container">
+						<a class="forecast-day-link" data-bs-toggle="modal" data-bs-target="#day-1"></a>
+					</div>
+					<div class="col-4 col-sm-2 col-md-2 forecast-container">
+						<a class="forecast-day-link" data-bs-toggle="modal" data-bs-target="#day-2"></a>
+					</div>
+					<div class="col-4 col-sm-2 col-md-2 forecast-container">
+						<a class="forecast-day-link" data-bs-toggle="modal" data-bs-target="#day-3"></a>
+					</div>
+					<div class="col-4 col-sm-2 col-md-2 forecast-container">
+						<a class="forecast-day-link" data-bs-toggle="modal" data-bs-target="#day-4"></a>
+					</div>
+					<div class="col-4 col-sm-2 col-md-2 forecast-container">
+						<a class="forecast-day-link" data-bs-toggle="modal" data-bs-target="#day-5"></a>
+					</div>
+					<div class="col-4 col-sm-2 col-md-2 forecast-container">
+						<a class="forecast-day-link" data-bs-toggle="modal" data-bs-target="#day-6"></a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</body>
 
-<!-- Weather forecast modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-	aria-labelledby="staticBackdropLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-scrollable">
+<!-- forecast-day-1 -->
+<div class="modal fade" id="day-1" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="weatherForecastLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 		<div class="modal-content" style="background-color: rgba(32,32,32,0.7)">
 			<div class="modal-header">
-				<h5 class="modal-title" id="staticBackdropLabel" style="color: beige;">Weather Forecast</h5>
+				<h5 class="modal-title" id="weatherForecastLabel" style="color: beige;">Weather Forecast</h5>
 				<img src="./assets/images/close.png" alt="x" class="close-icon" data-bs-dismiss="modal" aria-label="Close">
 			</div>
 			<div class="modal-body">
 				<div class="container-fluid" style="padding: 0;">
-
 					<!-- Day 1 -->
 					<div class="forecast-info-container container">
 						<!-- general info -->
@@ -151,7 +166,7 @@
 									<div align="center" class="hourly-flex">
 										<span class="hour-temp-c"></span><br>
 										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
+											<h6 class="forecast-description-hour"></h6>
 									</div>
 								</div>
 								<div class="col-4 col-md-2 col-sm-4 hour-container">
@@ -167,7 +182,7 @@
 									<div align="center" class="hourly-flex">
 										<span class="hour-temp-c"></span><br>
 										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
+											<h6 class="forecast-description-hour"></h6>
 									</div>
 								</div>
 								<div class="col-4 col-md-2 col-sm-4 hour-container">
@@ -197,7 +212,23 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
+<!-- forecast-day-2 -->
+<div class="modal fade" id="day-2" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="weatherForecastLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content" style="background-color: rgba(32,32,32,0.7)">
+			<div class="modal-header">
+				<h5 class="modal-title" id="weatherForecastLabel" style="color: beige;">Weather Forecast</h5>
+				<img src="./assets/images/close.png" alt="x" class="close-icon" data-bs-dismiss="modal" aria-label="Close">
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid" style="padding: 0;">
 					<!-- Day 2 -->
 					<div class="forecast-info-container container">
 						<!-- general info -->
@@ -290,7 +321,23 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
+<!-- forecast-day-3 -->
+<div class="modal fade" id="day-3" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="weatherForecastLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content" style="background-color: rgba(32,32,32,0.7)">
+			<div class="modal-header">
+				<h5 class="modal-title" id="weatherForecastLabel" style="color: beige;">Weather Forecast</h5>
+				<img src="./assets/images/close.png" alt="x" class="close-icon" data-bs-dismiss="modal" aria-label="Close">
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid" style="padding: 0;">
 					<!-- Day 3 -->
 					<div class="forecast-info-container container">
 						<!-- general info -->
@@ -383,7 +430,23 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
+<!-- forecast-day-4 -->
+<div class="modal fade" id="day-4" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="weatherForecastLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content" style="background-color: rgba(32,32,32,0.7)">
+			<div class="modal-header">
+				<h5 class="modal-title" id="weatherForecastLabel" style="color: beige;">Weather Forecast</h5>
+				<img src="./assets/images/close.png" alt="x" class="close-icon" data-bs-dismiss="modal" aria-label="Close">
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid" style="padding: 0;">
 					<!-- Day 4 -->
 					<div class="forecast-info-container container">
 						<!-- general info -->
@@ -476,196 +539,226 @@
 							</div>
 						</div>
 					</div>
-
-					<!-- Day 5 -->
-					<div class="forecast-info-container container">
-						<!-- general info -->
-						<div class="row">
-							<div class="col-md-12 col-xs-12">
-								<div align="center" id="datetime-container">
-									<span class="forecast-datetime"></span>
-									<span class="forecast-day"></span>
-								</div>
-								<div class="forecast-general-info-container">
-									<h2 align="center">
-										Temperature
-										<div class="row">
-											<div class="col-4">
-												<span class="temp">Min</span><br>
-												<span class="forecast-min-temp-c"></span>
-												<span class="forecast-min-temp-f"></span>
-											</div>
-											<div class="col-4">
-												<span class="temp">Average</span><br>
-												<span class="forecast-avg-temp-c"></span>
-												<span class="forecast-avg-temp-f"></span>
-											</div>
-											<div class="col-4">
-												<span class="temp">Max</span><br>
-												<span class="forecast-max-temp-c"></span>
-												<span class="forecast-max-temp-f"></span>
-											</div>
-										</div>
-									</h2>
-									<div align="center" class="flex">
-										<img src="" alt="" class="forecast-icon" />
-										<h2 class="forecast-description"></h2>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- hourly forecast -->
-						<div class="container">
-							<div class="row justify-content-center gx-2 hourly-forecast-container">
-								<h2 align="center">Hourly Weather Info</h2>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Day 6 -->
-					<div class="forecast-info-container container">
-						<!-- general info -->
-						<div class="row">
-							<div class="col-md-12 col-xs-12">
-								<div align="center" id="datetime-container">
-									<span class="forecast-datetime"></span>
-									<span class="forecast-day"></span>
-								</div>
-								<div class="forecast-general-info-container">
-									<h2 align="center">
-										Temperature
-										<div class="row">
-											<div class="col-4">
-												<span class="temp">Min</span><br>
-												<span class="forecast-min-temp-c"></span>
-												<span class="forecast-min-temp-f"></span>
-											</div>
-											<div class="col-4">
-												<span class="temp">Average</span><br>
-												<span class="forecast-avg-temp-c"></span>
-												<span class="forecast-avg-temp-f"></span>
-											</div>
-											<div class="col-4">
-												<span class="temp">Max</span><br>
-												<span class="forecast-max-temp-c"></span>
-												<span class="forecast-max-temp-f"></span>
-											</div>
-										</div>
-									</h2>
-									<div align="center" class="flex">
-										<img src="" alt="" class="forecast-icon" />
-										<h2 class="forecast-description"></h2>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- hourly forecast -->
-						<div class="container">
-							<div class="row justify-content-center gx-2 hourly-forecast-container">
-								<h2 align="center">Hourly Weather Info</h2>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-								<div class="col-4 col-md-2 col-sm-4 hour-container">
-									<h2 class="hour"></h2>
-									<div align="center" class="hourly-flex">
-										<span class="hour-temp-c"></span><br>
-										<img src="" alt="" class="forecast-icon-hour" /><br>
-										<h6 class="forecast-description-hour"></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
 				</div>
 			</div>
-			
+		</div>
+	</div>
+</div>
+
+<!-- forecast-day-5 -->
+<div class="modal fade" id="day-5" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="weatherForecastLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content" style="background-color: rgba(32,32,32,0.7)">
+			<div class="modal-header">
+				<h5 class="modal-title" id="weatherForecastLabel" style="color: beige;">Weather Forecast</h5>
+				<img src="./assets/images/close.png" alt="x" class="close-icon" data-bs-dismiss="modal" aria-label="Close">
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid" style="padding: 0;">
+					<!-- Day 4 -->
+					<div class="forecast-info-container container">
+						<!-- general info -->
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								<div align="center" id="datetime-container">
+									<span class="forecast-datetime"></span>
+									<span class="forecast-day"></span>
+								</div>
+								<div class="forecast-general-info-container">
+									<h2 align="center">
+										Temperature
+										<div class="row">
+											<div class="col-4">
+												<span class="temp">Min</span><br>
+												<span class="forecast-min-temp-c"></span>
+												<span class="forecast-min-temp-f"></span>
+											</div>
+											<div class="col-4">
+												<span class="temp">Average</span><br>
+												<span class="forecast-avg-temp-c"></span>
+												<span class="forecast-avg-temp-f"></span>
+											</div>
+											<div class="col-4">
+												<span class="temp">Max</span><br>
+												<span class="forecast-max-temp-c"></span>
+												<span class="forecast-max-temp-f"></span>
+											</div>
+										</div>
+									</h2>
+									<div align="center" class="flex">
+										<img src="" alt="" class="forecast-icon" />
+										<h2 class="forecast-description"></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- hourly forecast -->
+						<div class="container">
+							<div class="row justify-content-center gx-2 hourly-forecast-container">
+								<h2 align="center">Hourly Weather Info</h2>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- forecast-day-6 -->
+<div class="modal fade" id="day-6" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="weatherForecastLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content" style="background-color: rgba(32,32,32,0.7)">
+			<div class="modal-header">
+				<h5 class="modal-title" id="weatherForecastLabel" style="color: beige;">Weather Forecast</h5>
+				<img src="./assets/images/close.png" alt="x" class="close-icon" data-bs-dismiss="modal" aria-label="Close">
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid" style="padding: 0;">
+					<!-- Day 4 -->
+					<div class="forecast-info-container container">
+						<!-- general info -->
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								<div align="center" id="datetime-container">
+									<span class="forecast-datetime"></span>
+									<span class="forecast-day"></span>
+								</div>
+								<div class="forecast-general-info-container">
+									<h2 align="center">
+										Temperature
+										<div class="row">
+											<div class="col-4">
+												<span class="temp">Min</span><br>
+												<span class="forecast-min-temp-c"></span>
+												<span class="forecast-min-temp-f"></span>
+											</div>
+											<div class="col-4">
+												<span class="temp">Average</span><br>
+												<span class="forecast-avg-temp-c"></span>
+												<span class="forecast-avg-temp-f"></span>
+											</div>
+											<div class="col-4">
+												<span class="temp">Max</span><br>
+												<span class="forecast-max-temp-c"></span>
+												<span class="forecast-max-temp-f"></span>
+											</div>
+										</div>
+									</h2>
+									<div align="center" class="flex">
+										<img src="" alt="" class="forecast-icon" />
+										<h2 class="forecast-description"></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- hourly forecast -->
+						<div class="container">
+							<div class="row justify-content-center gx-2 hourly-forecast-container">
+								<h2 align="center">Hourly Weather Info</h2>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+								<div class="col-4 col-md-2 col-sm-4 hour-container">
+									<h2 class="hour"></h2>
+									<div align="center" class="hourly-flex">
+										<span class="hour-temp-c"></span><br>
+										<img src="" alt="" class="forecast-icon-hour" /><br>
+										<h6 class="forecast-description-hour"></h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

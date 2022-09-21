@@ -54,6 +54,11 @@ let weather = {
       document.getElementsByClassName('forecast-description')[day].innerText =
         data.forecast.forecastday[day].day.condition.text;
 
+			let dateDay = data.forecast.forecastday[day].date.split('-')[2];
+			let dateMonth = data.forecast.forecastday[day].date.split('-')[1];
+			let dateDisplay = `${dateDay}/${dateMonth}`;
+			document.getElementsByClassName('forecast-day-link')[day].innerHTML = dateDisplay;
+
 			for (let hour = 0; hour < 6; hour++, i++){
 				let hours = data.forecast.forecastday[day].hour[4*hour].time.split(' ')[1].split(':')[0];
 				let hourSuffix = hours >= 12 ? " PM":" AM"; 

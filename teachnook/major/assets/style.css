@@ -156,21 +156,20 @@ h1 {
 }
 
 
-.forecast-link {
+.forecast-day-link {
 	color: darkolivegreen !important;
 	font-family: 'Exo', sans-serif;
 	text-decoration: none;
 	cursor: pointer;
-	padding: 0.5rem 1.2rem;
+	padding: 0.5rem 0.7rem;
 	border: 1px transparent #eee;
 	border-radius: 20px;
 	background: #7c7c7c2b;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.forecast-link:hover {
+.forecast-day-link:hover {
 	font-weight: bold;
-	box-shadow: 0 4px 20px 0 rgba(32, 32, 32, 0.3), 0 6px 20px 0 rgba(32, 32, 32, 0.3);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .forecast-container {
@@ -308,8 +307,10 @@ h1 {
 }
 
 .hourly-flex h6 {
-	display: inline;
+	display: inline-flex;
 	margin: 0 !important;
+	max-height: 38px;
+	overflow: hidden;
 }
 
 .hour{
@@ -378,4 +379,12 @@ h1 {
 	-moz-transform: translate(0);
 	transform: translate(0);
 	animation-duration: 500;
-	}
+}
+
+.modal-body::-webkit-scrollbar {
+  display: none;
+}
+.modal-body {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
