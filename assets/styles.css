@@ -785,6 +785,12 @@ section {
     .about-container {
         grid-template-columns: 1fr;
     }
+
+    .stats-card {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2.5rem 0.5rem; /* Use the original padding */
+    }
 }
 
 @media (max-width: 768px) {
