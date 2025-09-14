@@ -1,12 +1,44 @@
 /* === ROOT VARIABLES === */
 :root {
+    /* Original design */
+    /* --color-primary: #3b82f6;
+    --color-primary-dark: #2563eb;
     --color-background: #f9fafb;
     --color-surface: #ffffff;
-    --color-primary: #3b82f6;
-    --color-primary-dark: #2563eb;
+    --color-border: #e5e7eb;
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #6b7280; */
+
+    /* Slate Teal */
+    /* --color-primary: #2A6F6D;
+    --color-primary-dark: #214F4D;
+    --color-accent: #E6B89C;
+    --color-background: #F9FAFB;
+    --color-surface: #FFFFFF;
+    --color-border: #e5e7eb;
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #6b7280; */
+
+    /* Muted Auberaine */
+    /* --color-primary: #6C4A7B;
+    --color-primary-dark: #52345A;
+    --color-accent: #E3C567; 
+    --color-surface: #FFFFFF;
+    --color-border: #e5e7eb;
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #6b7280; */
+    
+    /* Ocean Steel */
+    --color-primary: #1F5F8B;
+    --color-primary-dark: #153F59;
+    --color-accent: #F59E0B;
+    --color-bg: #F9FAFB;
+    --color-surface: #FFFFFF;
+    --color-border: #e5e7eb;
     --color-text-primary: #1f2937;
     --color-text-secondary: #6b7280;
-    --color-border: #e5e7eb;
+    
+    /* Font Families & Shadows */
     --font-primary: 'Poppins', sans-serif;
     --font-code: 'Source Code Pro', monospace;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -14,6 +46,7 @@
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --border-radius: 8px;
     --transition-speed: 0.3s;
+
     /* Brand Colors for Skill Icons */
     --color-python: #3776AB;
     --color-sql: #4479A1;
@@ -806,6 +839,6 @@ section {
     }
 
     .timeline-dot {
-        left: 22px;
+        left: 22px !important;
     }
 }
