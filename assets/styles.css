@@ -132,19 +132,8 @@ section {
     color: var(--color-text-primary);
     text-decoration: none;
 } */
-.nav-logo{
-    width: 60%;
-    overflow: hidden;
-    display: inline-block; 
-    padding-top: 1rem;
-}
-.nav-logo img{
-    width: 150%;
-    max-width: 520px;
-    height: 65px;
-    padding-top: 0.7rem;
-    object-fit: cover;
-    object-position: left;
+.nav-logo {
+    height: inherit;
 }
 
 
